@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[legalpaper, left=1 cm, right=0.5cm, top=1cm, bottom=0.5cm] {geometry}
+\date{} % Remove a exibição da data
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\lstset{
+  language=c,
+  basicstyle=\ttfamily,
+  keywordstyle=\bfseries\color{blue},
+  commentstyle=\color{blue},
+  stringstyle=\color{red!70!black},
+  numberstyle=\tiny,
+  stepnumber=1,
+  numbersep=5pt,
+  backgroundcolor=\color{white},
+  breaklines=true,
+  breakautoindent=true,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+\title{Modulo1}
+\begin{document}
+\maketitle
+\section{introdução}
+\subsection{Biblioteca}
+\begin{lstlisting}
+#include<nome_da_biblioteca>
+ Biblioteca e um conjunto de funcoes (pedacos de codigos) ja implementados
+e que podem ser utilizados pelo programador
+ Ex: stdio.h (entradas e saidas) ; stdlib.h (malloc, free); math.h .
+Main
+- Todo programa em C deve conter a funcao main().
+- Return 0;
+- Ex: int main(){}
+\end{lstlisting}
+\subsection{Operadores Aritméticos}
+- Multiplicação: *
+- Divisão inteira: int/int -> 7/2\\
+- Divisão real: int/float -> 7/2.0\\
+- subtração e adição padrão\\
+Lembre-se precedência de operadores.\\
+\subsection{Operadores Lógicos}
+\begin{lstlisting}
+- a && b
+- a || b
+- !a
+I/O
+Comando scanf(especificador, &variavel);
+ Exemplo: int a;
+scanf("%i", &a);
+\end{lstlisting}
+\subsection{comando printf}
+\begin{lstlisting}
+Comando printf (mensagem, variaveis)
+ Exemplos: int a = 2;
+ printf("%i\n", a);
+ printf("Valor: %i\n", a);
+\end{lstlisting}
+\begin{lstlisting}
+  int getchar(void): permite ler um unico caractere do teclado (le o codigo ASCII do
+caracter)
+#include <stdio.h>
+#include<stdlib.h>
+ int main() {
+char c;
+c = getchar();
+printf("caractere: %c\n", c);
+printf("codigo ASCII: %d\n", c);
+system("pause");
+return 0;
+ }
+\end{lstlisting}
+\subsection{estrutura de seleção}
+\begin{lstlisting}
+Condicional simples
+if (condicao){
+expressoes;
+expressoes;
+}
+Condicional if e else
+if (condicao) {
+comandos1;
+ } else {
+comandos2;
+ }
+
+ Condicional if e else
+if (condicao1) {
+comando1;
+} else {
+if (condicao2) {
+comando2;
+ } else {
+comando4;
+ }
+} 
+\end{lstlisting}
+
+\end{document}

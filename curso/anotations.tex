@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[a4paper, left=0.5cm, right=0.5cm, top=0.5cm, bottom=0.5cm]{geometry}
+\usepackage{listings}
+\date{}
+\usepackage{graphicx} 
+\usepackage{color}
+\usepackage{multicol} % Adicionado o pacote multicols
+\lstset{
+  language=c,
+  basicstyle=\ttfamily,
+  keywordstyle=\bfseries\color{red},
+  commentstyle=\color{blue},
+  stringstyle=\color{red!70!black},
+  numberstyle=\tiny,
+  stepnumber=1,
+  numbersep=5pt,
+  backgroundcolor=\color{white},
+  breaklines=true,
+  breakautoindent=true,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+
+\title{\textbf{\textcolor{blue}{Language C anotations}}}
+\begin{document}
+\maketitle
+\begin{multicols}{2}
+\textcolor{blue}{\section{\textcolor{blue}{Introduction}}}
+\textcolor{red}{\subsection{\textbf{\textcolor{red}{Cast}}}}
+\begin{lstlisting}
+    int a =3;
+    int b = 2;
+    double pontos = a /(double) b ;// cast de int para double
+    float pi = 3.1415;
+    int pi_convert =(int)pi;  
+\end{lstlisting}
+\textcolor{red}{\subsection{Booleano em c}}
+Os testes de booleano em c acontecem por meio de um numero inteiro, ou seja ele representa true por 1 e false por 0. 
+\begin{lstlisting}
+    int acertou = (escolha_jogador== numero_secreto);
+    int maior =  (escolha_jogador >numero_secreto);
+\end{lstlisting}
+O codigo acima faz teste lógico para as duas variaveis no codigo em questão, eram usando em condicionais , o que tornava o código mais legível.
+\textcolor{red}{\subsection{Obtendo numeros randomicos}}
+O trecho de código obtem numero randomicos, a cada segundo devido p uso da função time. 
+
+\begin{lstlisting}
+  int segundos =  time(0);
+  srand(segundos);
+  int numero_grande = rand()%100;
+\end{lstlisting}
+
+
+
+
+\end{multicols}
+
+
+
+\end{document}
+
